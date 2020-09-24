@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+        <servlet>
+            <servlet-name>LoginServlet</servlet-name>
+            <servlet-class>LoginServlet</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>UserServlet</servlet-name>
+            <servlet-class>UserServlet</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>AdminServlet</servlet-name>
+            <servlet-class>AdminServlet</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>DashboardServlet</servlet-name>
+            <servlet-class>DashboardServlet</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>WelcomeServlet</servlet-name>
+            <servlet-class>WelcomeServlet</servlet-class>
+        </servlet>
+    <servlet>
+        <servlet-name>ADDBookServlet</servlet-name>
+        <servlet-class>ADDBookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookServletDelete</servlet-name>
+        <servlet-class>BookServletDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>AdminLoginServlet</servlet-class>
+    </servlet>
+
+        <servlet-mapping>
+            <servlet-name>LoginServlet</servlet-name>
+            <url-pattern>/servletLogin</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>UserServlet</servlet-name>
+            <url-pattern>/servletUser</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>AdminServlet</servlet-name>
+            <url-pattern>/servletAdmin</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>DashboardServlet</servlet-name>
+            <url-pattern>/servletDashboard</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>WelcomeServlet</servlet-name>
+            <url-pattern>/servletWelcome</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>ADDBookServlet</servlet-name>
+            <url-pattern>/ServletADDBook</url-pattern>
+        </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookServletDelete</servlet-name>
+        <url-pattern>/BookServletDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+
+        <welcome-file-list>
+            <welcome-file>servletWelcome</welcome-file>
+        </welcome-file-list>
+
+    <context-param>
+        <param-name>parametername</param-name>
+        <param-value>parameterpass</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>LibraryContextServletListener</listener-class>
+    </listener>
+
+</web-app>
